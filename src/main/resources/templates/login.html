@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+    <head lang="pl">
+        <title>Wyceń cokolwiek</title>
+    </head>
+    <body layout:fragment="content">
+        <h2 style="text-align: center;">Logowanie</h2>
+        <div th:if="${param.error}" style="text-align: center;">
+            Nieprawidłowa nazwa użytkownika lub hasło.
+        </div>
+        <div th:if="${param.logout}" style="text-align: center;">
+            Zostałeś wylogowany.
+        </div>
+        <form th:action="@{/login}" method="post" class="col s6" style="width: 50%; margin: auto;">
+            <input type="text" id="username" name="username" placeholder="Nazwa użytkownika"/>
+            <input type="password" id="password" name="password" placeholder="Hasło"/>
+            <button type="submit" class="btn waves-effect waves-light">Zaloguj</button>
+        </form>
+    </body>
+</html>

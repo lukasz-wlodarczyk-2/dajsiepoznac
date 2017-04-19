@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+    <head lang="pl">
+        <title>Wyceń cokolwiek</title>
+    </head>
+    <body layout:fragment="content">
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <p>Last login - ... tbi :D</p>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out" class="btn waves-effect waves-light"/>
+        </form>
+    </body>
+</html>

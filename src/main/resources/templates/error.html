@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+    <head lang="pl">
+        <title th:text="${status}">404</title>
+    </head>
+    <body layout:fragment="content">
+        <h1 class="indigo-text center" th:text="${status} + ' ' + ${error}">Strona nie istnieje</h1>
+        <p class="col s12 center" th:text="${message}">Żądana strona nie istnieje</p>
+    </body>
+</html>

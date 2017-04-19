@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+    <head lang="pl">
+        <title>Wyceń cokolwiek</title>
+    </head>
+    <body layout:fragment="content">
+        <p>Kliknij <a th:href="@{/dashboard}">tutaj</a> żeby się zalogować.</p>  
+    </body>
+</html>
