@@ -7,10 +7,14 @@
         <title>Wyceń cokolwiek</title>
     </head>
     <body layout:fragment="content">
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <nav>
+            <div class="nav-wrapper">
+                <a th:inline="text" href="" class="brand-logo" style="margin-left: 20px;">Witaj, [[${#httpServletRequest.remoteUser}]]!</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><form th:action="@{/logout}" method="post"><input type="submit" value="Wyloguj" class="btn waves-effect waves-light" style="margin-right: 20px;"/></form></li>
+                </ul>
+            </div>
+        </nav>
         <p>Last login - ... tbi :D</p>
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out" class="btn waves-effect waves-light"/>
-        </form>
     </body>
 </html>

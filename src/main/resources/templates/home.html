@@ -7,6 +7,13 @@
         <title>Wyceń cokolwiek</title>
     </head>
     <body layout:fragment="content">
-        <p>Kliknij <a th:href="@{/dashboard}">tutaj</a> żeby się zalogować.</p>  
+        <nav>
+            <div class="nav-wrapper">
+                <a th:inline="text" class="brand-logo" style="margin-left: 20px;">Witaj, nieznajomy!</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a th:href="@{/dashboard}" type="submit" class="btn waves-effect waves-light" style="margin-right: 20px;">Zaloguj</a></li>
+                </ul>
+            </div>
+        </nav>
     </body>
 </html>
